@@ -10,13 +10,14 @@ package sef.module6.activity;
 public interface Point2D {
 	
 	/**
-	 *  Finds the distance between this point object and the passed coordinates (x2,y2) of a second point 
-	 * 
-	 * @param  x2 is the point coordinate along the x-axis 
-	 *         y2 is the point coordinate along the y-axis 
-	 *         
+	 *  Finds the distance between this point object and the passed coordinates (x2,y2) of a second point
+	 *
+	 * @param  x2 is the point coordinate along the x-axis
+	 *         y2 is the point coordinate along the y-axis
+	 *
 	 * @return the calculated distance between the two points as a double
 	 */
+
 	public double getDistance(double x2, double y2);
 	
 	/**
@@ -27,6 +28,8 @@ public interface Point2D {
 	 * 
 	 * @return the calculated distance between the two points as a double
 	 */
+
+
 	public double getDistance(Point2D p2);
 	
 	/**

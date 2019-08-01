@@ -22,9 +22,7 @@ public class Point2DTest extends TestCase{
 		runTest.testTranslate();
 	}
 	
-	public void testEquals(){
-		runTest.testEquals();	
-	}
+	public void testEquals(){ runTest.testEquals(); }
 	
 	public void testGetDistance(){
 		runTest.testGetDistance();

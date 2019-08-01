@@ -58,7 +58,8 @@ public class PlayingCard {
 		//TODO #2: Write code that will filter number and suit with the range provided above.
 		// Assign the number and suit argument to instance variable respectively
 		// If the arguments were not filter, make a code that will assign instance variables to a JOKER value
-		
+		this.number = (ACE <= number && number <= KING) ? number : (this.suit = suit = JOKER);
+		this.suit = (CLUBS <= suit && suit <= SPADES) ? suit : (this.number = JOKER);
 		//END TODO #2
 		
 	
@@ -73,7 +74,7 @@ public class PlayingCard {
 
 		//TODO #3: Make an instance of JOKER playing card
 		// Assign instance variable to a JOKER value
-		
+		number = suit = JOKER;
 		//END TODO #3
 		
 		
@@ -91,10 +92,10 @@ public class PlayingCard {
 		
 		//TODO #4: Return the Integer value of the playing card
 		// Return the value of current value of the number 
-		
+		return this.number;
 		//END TODO #4
 	
-		return 0;
+		//return 0;
 	}
 
 
@@ -108,10 +109,10 @@ public class PlayingCard {
 
 		//TODO #5: Return the Integer value of the playing card
 		// Return the value of current value of the suit 
-		
+		return this.suit;
 		//END TODO #5
 
-		return 0;
+		//return 0;
 	}
 
 
@@ -130,7 +131,66 @@ public class PlayingCard {
 		// Make a code that will return the String value of JOKER if the default value was chosen
 		
 		//END TODO #6
-		
-		return "";
+		StringBuilder res = new StringBuilder(20);
+		switch (number) {
+			case ACE:
+				res.append("ACE");
+				break;
+			case TWO:
+				res.append("TWO");
+				break;
+			case THREE:
+				res.append("THREE");
+				break;
+			case FOUR:
+				res.append("FOUR");
+				break;
+			case FIVE:
+				res.append("FIVE");
+				break;
+			case SIX:
+				res.append("SIX");
+				break;
+			case SEVEN:
+				res.append("SEVEN");
+				break;
+			case EIGHT:
+				res.append("EIGHT");
+				break;
+			case NINE:
+				res.append("NINE");
+				break;
+			case TEN:
+				res.append("TEN");
+				break;
+			case JACK:
+				res.append("JACK");
+				break;
+			case QUEEN:
+				res.append("QUEEN");
+				break;
+			case KING:
+				res.append("KING");
+				break;
+			default:
+				return "JOKER";
+		}
+		switch (suit) {
+			case SPADES:
+				res.append(" of SPADES");
+				break;
+			case HEARTS:
+				res.append(" of HEARTS");
+				break;
+			case DIAMONDS:
+				res.append(" of DIAMONDS");
+				break;
+			case CLUBS:
+				res.append(" of CLUBS");
+				break;
+			default:
+				return "JOKER";
+		}
+		return res.toString();
 	}
 }
