@@ -44,7 +44,7 @@ public interface Radar {
 	 * @return
 	 */
 	public RadarContact getContact(String id);
-	
+
 	
 	
 	/**

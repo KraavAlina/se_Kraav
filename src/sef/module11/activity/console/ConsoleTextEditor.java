@@ -18,9 +18,9 @@ public class ConsoleTextEditor {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 			
-			System.out.println("Please, enter a name of file where the text will be saved");
+			//System.out.println("Please, enter a name of file where the text will be saved");
 			
-			String name = in.readLine();
+			String name = args[0];
 			
 			System.out.println("Please, enter a path where the file will be created (optional)");
 			

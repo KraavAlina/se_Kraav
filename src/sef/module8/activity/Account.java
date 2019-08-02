@@ -20,7 +20,7 @@ public class Account {
 	 * @throws AccountException
 	 */
 	public  Account(String accountName) throws AccountException{
-		try{
+
 			if (accountName.length() < 5)
 				throw new AccountException (AccountException.NAME_TOO_SHORT, accountName);
 			boolean valid = true;
@@ -34,12 +34,6 @@ public class Account {
 				}
 			}
 			if (!valid) throw new AccountException (AccountException.NAME_TOO_SIMPLE, accountName);
-		}
-		catch (AccountException e) {
-			System.out.println(e.getMessage());
-		}
-
-
 			this.name = accountName;
 	}
 	

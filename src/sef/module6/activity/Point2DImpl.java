@@ -104,7 +104,7 @@ public class Point2DImpl implements Point2D {
 	 * @see sef.module5.activity.Point2D#equals(double, double)
 	 */
 	public boolean equals(double x2, double y2){
-		return (-0.00001 <= Math.abs(this.getX()-x2) && Math.abs(this.getY()-y2) <= 0.00001);
+		return (Math.abs(this.getX()-x2) <= 0.000001 && Math.abs(this.getY()-y2) <= 0.00001);
 	}
 	
 	

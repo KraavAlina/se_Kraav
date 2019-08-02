@@ -14,7 +14,7 @@ public class AccountDAOImpl implements AccountDAO {
 
 	public List<Account> findAccount(String firstName, String lastName)
 			throws AccountDAOException {
-		
+
 		return null;
 	}
 

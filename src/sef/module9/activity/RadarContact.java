@@ -59,5 +59,6 @@ public interface RadarContact {
 	 * @return the distance of the contact
 	 */
 	public double getDistance();
-	
+
+
 }
