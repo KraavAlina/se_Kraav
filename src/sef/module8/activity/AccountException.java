@@ -13,30 +13,23 @@ public class AccountException extends Exception{
 	
 	public static final String NAME_TOO_SHORT = "Name must be longer than 4 characters";
 	public static final String NAME_TOO_SIMPLE = "Name must contain a combination of letters and numbers"; 
-	
-	
-	
+	private String name;
 	/**
-	 * Constructs an AcountException
+	 * Constructs an AccountException
 	 * 
 	 * @param message The message to be set explaining the name violation (see static attributes)
 	 * @param name The actual name 
 	 */
 	public AccountException(String message, String name){
-
-		
-		
+		super(message);
+		this.name=name;
 	}
-	
 	/**
 	 * Returns the name passed to this Account exception
 	 * 
 	 * @return
 	 */
 	public String getName(){
-		return "";
+		return this.name;
 	}
-	
-	
-	
 }

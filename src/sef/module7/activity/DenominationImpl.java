@@ -68,7 +68,7 @@ public class DenominationImpl implements Denomination {
 			return false;
 		else{
 			Denomination tmp = (Denomination) o;
-			if (this.getName() == tmp.getName() && this.getSymbol() == tmp.getSymbol())
+			if (this.getName().equals(tmp.getName()) && this.getSymbol().equals(tmp.getSymbol()))
 				return true;
 			else
 				return false;

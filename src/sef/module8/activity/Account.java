@@ -2,7 +2,7 @@ package sef.module8.activity;
 
 
 /**
- * Thsi class represents a simple representation of an account encapsulating
+ * This class represents a simple representation of an account encapsulating
  * a name 
  * 
  * @author John Doe
@@ -10,19 +10,37 @@ package sef.module8.activity;
  */
 public class Account {
 
-
+	private String name;
 
 	/**
-	 * Creates an Account object with the specified name.  If the accout name
+	 * Creates an Account object with the specified name.  If the account name
 	 * given violates the minimum requirements, then an AccountException is thrown
 	 * 
 	 * @param accountName
 	 * @throws AccountException
 	 */
 	public  Account(String accountName) throws AccountException{
-			
-			
-			
+		try{
+			if (accountName.length() < 5)
+				throw new AccountException (AccountException.NAME_TOO_SHORT, accountName);
+			boolean valid = true;
+			char[] a = accountName.toCharArray();
+			for (char c: a) {
+				valid = ((c >= 'a') && (c <= 'z')) ||
+						((c >= 'A') && (c <= 'Z')) ||
+						((c >= '0') && (c <= '9'));
+				if (!valid) {
+					break;
+				}
+			}
+			if (!valid) throw new AccountException (AccountException.NAME_TOO_SIMPLE, accountName);
+		}
+		catch (AccountException e) {
+			System.out.println(e.getMessage());
+		}
+
+
+			this.name = accountName;
 	}
 	
 	
@@ -32,6 +50,6 @@ public class Account {
 	 * @return the account name
 	 */
 	public String getName(){
-		return "";
+		return this.name;
 	}
 }
