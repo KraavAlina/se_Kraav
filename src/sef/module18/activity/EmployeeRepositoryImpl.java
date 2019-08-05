@@ -143,14 +143,14 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 		
 		try {
 			PreparedStatement pStmt = conn
-					.prepareStatement("insert into EMPLOYEE (FIRSTNAME, LASTNAME, PROF_LEVEL) VALUES (?,?,?)");
+					.prepareStatement("insert into EMPLOYEE (ID, FIRSTNAME, LASTNAME, PROF_LEVEL) VALUES (EMPLOYEE_SEQ.NEXTVAL, ?,?,?)");
 
 			pStmt.setString(1, employee.getFirstName());
 			pStmt.setString(2, employee.getLastName());
 			pStmt.setInt(3, employee.getProfLevel());
 
 			int rows = pStmt.executeUpdate();
-			
+
 			conn.commit();
 			if (rows == 1) {
 				pStmt = conn

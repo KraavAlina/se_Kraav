@@ -21,12 +21,12 @@ import junit.framework.TestCase;
 	Log logger = LogFactory.getLog(this.getClass());
 	
 	protected void setUp() throws Exception {
-		super.setUp();	
+		super.setUp();
 		username = "sa";
 		password = "";
 		Class.forName("org.h2.Driver");
-        url = "jdbc:h2:~/test";
-        conn = DriverManager.getConnection(url, username, password);
+		url = "jdbc:h2:~/test";
+		conn = DriverManager.getConnection(url, username, password);
 		conn.setAutoCommit(false);
 		System.out.println("Connection successfully established!");
 	}
